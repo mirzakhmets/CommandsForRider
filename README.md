@@ -1,0 +1,2 @@
+# CommandsForRider
+ JetBrains Rider Plugin
