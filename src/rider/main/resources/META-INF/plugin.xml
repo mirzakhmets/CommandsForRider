@@ -1,0 +1,33 @@
+<idea-plugin require-restart="true">
+  <id>com.jetbrains.rider.plugins.actions</id>
+  <name>ReSharper SDK – Actions</name>
+  <version>1.0</version>
+  <vendor url="https://SkyerBiz.com/Actions">Linck Weyn</vendor>
+  <idea-version since-build="223.8836.53" until-build="241.*" />
+  <depends>com.intellij.modules.rider</depends>
+
+  <description>
+<![CDATA[
+<p>Adds a global action that triggers a message box.</p>
+]]>
+  </description>
+
+  <actions resource-bundle="messages.RiderPluginActionsBundle">
+    <!-- The ids used here are only relevant for bundle properties and frontend testing -->
+    <group id="CommandsForRider">
+      <add-to-group group-id="EditorPopupMenu" />
+      <separator/>
+      <action id="CopyPath" class="commands.CopyPathAction" icon="/images/correct.png">
+        <keyboard-shortcut keymap="$default" first-keystroke="shift control C"/>
+        <keyboard-shortcut keymap="Visual Studio" first-keystroke="shift control C"/>
+        <keyboard-shortcut keymap="Visual Studio OSX" first-keystroke="shift meta C"/>
+      </action>
+      <action id="OpenPathInBrowser" class="commands.OpenPathInBrowserAction" icon="/images/correct.png">
+        <keyboard-shortcut keymap="$default" first-keystroke="shift control B"/>
+        <keyboard-shortcut keymap="Visual Studio" first-keystroke="shift control B"/>
+        <keyboard-shortcut keymap="Visual Studio OSX" first-keystroke="shift meta B"/>
+      </action>
+    </group>
+  </actions>
+
+</idea-plugin>
